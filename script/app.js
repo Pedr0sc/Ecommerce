@@ -6,7 +6,8 @@ const products = [
         price: 7999.99,
         category: "smartphone",
         description: "O mais avançado iPhone com chip A17 Pro e câmera de 48MP",
-        icon: "📱"
+        icon: "📱",
+        image: "imagens/iphone15pro.jpg",
     },
     {
         id: 2,
@@ -14,7 +15,8 @@ const products = [
         price: 9999.99,
         category: "laptop",
         description: "Notebook ultra-fino com chip M2 e 16GB de RAM",
-        icon: "💻"
+        icon: "💻",
+        image: "imagens/Macbook Air M2.webp"
     },
     {
         id: 3,
@@ -22,7 +24,8 @@ const products = [
         price: 1899.99,
         category: "accessory",
         description: "Fones com cancelamento ativo de ruído",
-        icon: "🎧"
+        icon: "🎧",
+        image: "imagens/AirPods Pro.webp"
     },
     {
         id: 4,
@@ -30,7 +33,8 @@ const products = [
         price: 8499.99,
         category: "tablet",
         description: "Tablet profissional com tela Liquid Retina XDR",
-        icon: "📱"
+        icon: "📱",
+        image: "imagens/IPad Pro 12.9.webp"
     },
     {
         id: 5,
@@ -38,7 +42,8 @@ const products = [
         price: 5999.99,
         category: "smartphone",
         description: "Smartphone Android com câmera de 200MP e IA integrada",
-        icon: "📱"
+        icon: "📱",
+        image: "imagens/Samsung Galaxy S24.webp"
     },
     {
         id: 6,
@@ -46,7 +51,8 @@ const products = [
         price: 7499.99,
         category: "laptop",
         description: "Ultrabook premium com tela InfinityEdge",
-        icon: "💻"
+        icon: "💻",
+        image: "imagens/Dell XPS 13.avif"
     },
     {
         id: 7,
@@ -54,7 +60,8 @@ const products = [
         price: 699.99,
         category: "accessory",
         description: "Mouse sem fio com superfície Multi-Touch",
-        icon: "🖱️"
+        icon: "🖱️",
+        image: "imagens/Magic Mouse.jpg"
     },
     {
         id: 8,
@@ -62,7 +69,8 @@ const products = [
         price: 4999.99,
         category: "tablet",
         description: "iPad com chip M1 e suporte ao Apple Pencil",
-        icon: "📱"
+        icon: "📱",
+        image: "imagens/Ipad Air.jpeg"
     },
     {
         id: 9,
@@ -70,7 +78,8 @@ const products = [
         price: 4799.99,
         category: "smartphone",
         description: "Smartphone Google com IA avançada e câmera excepcional",
-        icon: "📱"
+        icon: "📱",
+        image: "imagens/Google Pixel 8.jpg"
     },
     {
         id: 10,
@@ -78,7 +87,8 @@ const products = [
         price: 8999.99,
         category: "tablet",
         description: "Tablet 2-em-1 da Microsoft com Windows 11",
-        icon: "📱"
+        icon: "📱",
+        image: "imagens/Surface Pro 9.jpeg"
     },
     {
         id: 11,
@@ -86,7 +96,8 @@ const products = [
         price: 899.99,
         category: "accessory",
         description: "Teclado mecânico RGB com switches Cherry MX",
-        icon: "⌨️"
+        icon: "⌨️",
+        image: "imagens/Mechanical Keyboard.jpeg"
     },
     {
         id: 12,
@@ -94,7 +105,8 @@ const products = [
         price: 12999.99,
         category: "laptop",
         description: "Notebook gamer com RTX 4070 e Ryzen 9",
-        icon: "💻"
+        icon: "💻",
+        image: "imagens/Asus ROG Laptop.png",
     }
 ];
 
@@ -116,7 +128,9 @@ function renderProducts() {
     
     grid.innerHTML = filteredProducts.map(product => `
         <div class="product-card" data-category="${product.category}">
-            <div class="product-image">${product.icon}</div>
+            
+            <img class="product-image" src="${product.image}" alt="${product.name}">
+
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
                 <div class="product-price">R$ ${product.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
