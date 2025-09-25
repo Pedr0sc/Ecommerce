@@ -186,7 +186,7 @@ function updateCartCount() {
     }
 }
 
-// Toggle cart modal
+// alterna o modal 
 function toggleCart() {
     const modal = document.getElementById('cart-modal');
     const isVisible = modal.classList.contains('show');
@@ -199,7 +199,7 @@ function toggleCart() {
     }
 }
 
-// Render cart items
+// renderizando os intens 
 function renderCart() {
     const cartItemsContainer = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
@@ -229,7 +229,7 @@ function renderCart() {
     cartTotal.textContent = total.toLocaleString('pt-BR', {minimumFractionDigits: 2});
 }
 
-// Update quantity
+// incrementa elementos no carrinhoo 
 function updateQuantity(productId, change) {
     const item = cart.find(item => item.id === productId);
     if (item) {
@@ -243,14 +243,14 @@ function updateQuantity(productId, change) {
     }
 }
 
-// Remove from cart
+// remove item 
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     updateCartCount();
     renderCart();
 }
 
-// Checkout
+// Check
 function checkout() {
     if (cart.length === 0) {
         alert('Seu carrinho está vazio!');
@@ -262,13 +262,13 @@ function checkout() {
     
     alert(`Compra finalizada com sucesso!\n\nItens: ${itemCount}\nTotal: R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}\n\nObrigado pela sua compra! 🛒✨`);
     
-    // Clear cart
+    // limpa
     cart = [];
     updateCartCount();
     toggleCart();
 }
 
-// Close modal when clicking outside
+// ao clicar fora fecha o modal 
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('cart-modal');
     if (modal) {
