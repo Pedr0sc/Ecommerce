@@ -257,15 +257,11 @@ function checkout() {
         return;
     }
     
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+    // Salva o carrinho no armazenamento local
+    localStorage.setItem('techStoreCart', JSON.stringify(cart));
     
-    alert(`Compra finalizada com sucesso!\n\nItens: ${itemCount}\nTotal: R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}\n\nObrigado pela sua compra! 🛒✨`);
-    
-    // limpa
-    cart = [];
-    updateCartCount();
-    toggleCart();
+    // Redireciona para a página de checkout
+    window.location.href = 'checkout.html';
 }
 
 // ao clicar fora fecha o modal 

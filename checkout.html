@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TechStore</title>
+    <link rel="stylesheet" href="css/style.css"> <link rel="stylesheet" href="css/checkout.css"> </head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🛒 TechStore</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Continuar Comprando</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Finalizar Compra</h1>
+        <div class="checkout-layout">
+            <div class="form-column">
+                <form id="checkout-form">
+                    <h2>Seus Dados</h2>
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <h2>Endereço de Entrega</h2>
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" placeholder="Apenas números" maxlength="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="street">Rua</label>
+                        <input type="text" id="street" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Número</label>
+                        <input type="text" id="number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" id="neighborhood" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" required>
+                    </div>
+                    
+                    <button type="submit" class="place-order-btn">Finalizar Pedido</button>
+                </form>
+            </div>
+
+            <div class="summary-column">
+                <div class="order-summary">
+                    <h2>Resumo do Pedido</h2>
+                    <ul id="summary-items">
+                        </ul>
+                    <div class="summary-total">
+                        <h3>Total: <span id="summary-total">R$ 0,00</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechStore. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script/checkout.js"></script>
+</body>
+</html>
