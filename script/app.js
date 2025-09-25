@@ -113,13 +113,13 @@ const products = [
 let cart = [];
 let currentFilter = 'all';
 
-// Initialize the store
+// Inicia a loja
 function init() {
     renderProducts();
     updateCartCount();
 }
 
-// Render products
+// renderiza os produtos 
 function renderProducts() {
     const grid = document.getElementById('products-grid');
     const filteredProducts = currentFilter === 'all' 
